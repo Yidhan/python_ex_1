@@ -26,7 +26,7 @@
 print("start of part 0") # set breakpoint here
 # your code here
 name = input("Enter your name")
-print("Hello"+name)
+print("Hello "+name)
 
 print("end of 0") # set breakpoint here 
 '''
