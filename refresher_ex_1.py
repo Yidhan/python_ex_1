@@ -218,6 +218,18 @@ for e in sentence_list:
 # LANGUAGE
 print("start of part 3") # set breakpoint here
 # your code here
+s = "Python is an interpreted, high-level, general-purpose programming language."
+word_list = s.split() #split s into a word list, separated by space
+uppercase = False #set the first word in the list not uppercase
+for e in word_list:
+    e = e.replace(',','') #replace ',' with empty string - to delete the ','
+    e = e.replace('.','') #replace '.' with empty string - to delete the '.'
+    if uppercase == False:
+        print(e) # when uppercase is False, print word directly
+        uppercase = True # set uppercase True for the next word in the list
+    else:
+        print(e.upper()) # when uppercase is not False(True), print word in uppercase
+        uppercase = False # set uppercase False for the next word in the list
 
 
 print("end of 3") # set breakpoint here 
