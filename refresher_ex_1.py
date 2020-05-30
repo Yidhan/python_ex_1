@@ -102,8 +102,17 @@ print("Hello", name)
 print("start of part 1") # set breakpoint here
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
-# your code
-X = [ L[0],L[2][1],L[2][2],[L[3][0][0],L[3][1][0]],L[4][0],L[4][-1]]
+# originally wrote code below,
+# but found it hard to add comment to each element and hard to follow
+#X = [ L[0],L[2][1],L[2][2],[L[3][0][0],L[3][1][0]],L[4][0],L[4][-1]]
+element1 = L[0] # 0
+element2 = L[2][1] # 2
+element3 = L[2][2] # 3
+element4 = [L[3][0][0],L[3][1][0]] #[5,6]
+element5 = L[4][0] # 8
+element6 = L[4][-1] # 10
+X = [element1, element2, element3, element4, element5, element6] #put all elements together in a list
+
 print(X)
 print("end of 1") # set breakpoint here 
 '''
