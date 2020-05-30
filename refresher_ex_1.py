@@ -157,14 +157,17 @@ print(newL) # [0, 2, 3, [5, 6], 8, 10]
 # part 2
 # Task: Break s into sentences (which end in a .), count them and print them out using a loop:
 # result: (I truncated them with ...)
-# there are 4 sentences:
+# there are 4 sentences: (should be 3??)
 # Python is an interpreted, high-level, general-purpose programming language
 #  Created by Guido van Rossum and first released in 1991, Python ...
 #  Its language constructs and object-oriented approach aim to help programmers ...
 print("start of part 2") # set breakpoint here
 s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 # your code here
-
+sentences = s.split(".") #split s into sentences list by "."
+print("there are",len(sentences),"sentences") #print out "there are 3 sentences"
+for e in sentences:
+    print(e) #print each element in the sentences list
 print("end of 2") # set breakpoint here 
 '''
 
@@ -340,7 +343,7 @@ for x in range(5, 15):
 
 
 def abbr(s, filler="...", total_width=15):
-    '''returns a copy of s abbreviated to total_width with filler in the middle''' 
+    '''returns a copy of s abbreviated to total_width with filler in the middle'''
     x = total_width // 2 # integer division
     rem = total_width % 2 # remainder will be 1 if width is odd
     abb_str = s[0:x+rem] + filler + s[-x:] # for odd width, add one to front
